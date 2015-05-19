@@ -11,45 +11,45 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Model implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	private String model;
-	
-	private String category;
+    private static final long serialVersionUID = 1L;
 
-	@ManyToOne
-	private Car car;
-	
-	/* Gets and Sets */
-	public String getModel() {
-		return model;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-	public void setModel(String model) {
-		this.model = model;
-	}
+    private String model;
 
-	public String getCategory() {
-		return category;
-	}
+    private String category;
 
-	public void setCategory(String category) {
-		this.category = category;
-	}
+    @ManyToOne
+    private Car car;
 
-	public Long getId() {
-		return id;
-	}
+    /* Gets and Sets */
+    public String getModel() {
+        return model;
+    }
 
-	public Car getCar() {
-		return car;
-	}
+    public void setModel(String model) {
+        this.model = model;
+    }
 
-	public void setCar(Car car) {
-		this.car = car;
-	}
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
 }
